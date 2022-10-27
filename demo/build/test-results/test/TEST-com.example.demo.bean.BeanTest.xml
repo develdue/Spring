@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.demo.bean.BeanTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-10-27T08:06:41" hostname="DESKTOP-R9BUSBK" time="0.021">
+  <properties/>
+  <testcase name="애플리케이션 빈 조회" classname="com.example.demo.bean.BeanTest" time="0.021"/>
+  <system-out><![CDATA[17:06:41.244 [Test worker] DEBUG org.springframework.context.annotation.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7642df8f
+17:06:41.268 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+17:06:41.408 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+17:06:41.411 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+17:06:41.412 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+17:06:41.414 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+17:06:41.425 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'appConfig'
+17:06:41.430 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'itemService'
+17:06:41.446 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'repository'
+bean = com.example.demo.appconfig.AppConfig$$EnhancerBySpringCGLIB$$d11f0e7c@2b27cc70 beanDefinitionName = appConfig
+bean = com.example.demo.itemservice.ItemServiceImpl@6f6a7463 beanDefinitionName = itemService
+bean = com.example.demo.repository.RepositoryImpl@1bdaa23d beanDefinitionName = repository
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
