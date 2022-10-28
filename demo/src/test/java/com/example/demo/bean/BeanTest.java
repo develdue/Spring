@@ -15,10 +15,10 @@ public class BeanTest {
     void findAllBeans(){
 
 
-        String[] beanDefinitionNames = ac.getBeanDefinitionNames();//
+        String[] beanDefinitionNames = ac.getBeanDefinitionNames();//변수 ac안에 있는 빈의 이름을 전부 가져와서 beanDefinitionNames string배열에 넣는다.
 
         for(String beanDefinitionName : beanDefinitionNames){
-            Object bean = ac.getBean(beanDefinitionName); //KEY 값 =  VAL 값
+            Object bean = ac.getBean(beanDefinitionName); //KEY 값 =  VAL 값  Object
 
 
 
