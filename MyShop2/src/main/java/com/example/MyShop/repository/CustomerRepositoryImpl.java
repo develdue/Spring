@@ -6,7 +6,12 @@ import java.util.Map;
 
 public class CustomerRepositoryImpl implements CustomerRepository{
 
+    private final AccountRepositoryImpl accountRepositoryDependencyIn;
     private static final Map<Long, Customer> store = new HashMap<>();//고객테이블
+
+    public CustomerRepositoryImpl(AccountRepositoryImpl accountRepositoryDependencyIn) {
+        this.accountRepositoryDependencyIn=accountRepositoryDependencyIn;
+    }
 
     @Override
     public void customerJoin(Customer customer) {

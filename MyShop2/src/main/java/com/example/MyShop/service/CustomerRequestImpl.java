@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 
 public class CustomerRequestImpl implements CustomerRequest{
 
-    CustomerRepository customerrepository = new CustomerRepositoryImpl();
+    CustomerRepository customerrepository = new CustomerRepositoryImpl(new AccountRepositoryImpl());
     AccountRepository accountRepository = new AccountRepositoryImpl();
 
     @Override

@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CustomerRepositoryImplTest {
 
-    CustomerRepository customerRepository = new CustomerRepositoryImpl();//회원가입에 필요한 객체가 필요하기에 객체 생성
+    CustomerRepository customerRepository = new CustomerRepositoryImpl(new AccountRepositoryImpl());//회원가입에 필요한 객체가 필요하기에 객체 생성
     AccountRepository accountRepository = new AccountRepositoryImpl();
     @Test
     void customerJoin(){
