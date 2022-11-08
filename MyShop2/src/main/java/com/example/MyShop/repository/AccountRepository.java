@@ -8,4 +8,7 @@ public interface AccountRepository {
 
     Account selectAccount(Long id);
 
+    Account deleteAccount(Long id);
+
+    Account updateAccount(Long id,Long customerId,String customerPassword,String address);
 }

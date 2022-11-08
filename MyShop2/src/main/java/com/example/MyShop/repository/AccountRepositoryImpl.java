@@ -24,4 +24,18 @@ public class AccountRepositoryImpl implements AccountRepository{
     public Account selectAccount(Long id) {
         return bank.get(id);
     }
+
+    @Override
+    public Account deleteAccount(Long id) {
+        bank.remove(id);
+       return bank.get(id);
+    }
+
+    @Override
+    public Account updateAccount(Long id, Long customerId, String customerPassword, String address) {
+        bank.get(id).setCustomerId(customerId);
+        bank.get(id).setCustomerPassword(customerPassword);
+        bank.get(id).setAddress(address);
+        return bank.get(id);
+    }
 }
