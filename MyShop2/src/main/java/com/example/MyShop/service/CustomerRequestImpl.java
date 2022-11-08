@@ -6,6 +6,7 @@ import com.example.MyShop.repository.AccountRepository;
 import com.example.MyShop.repository.AccountRepositoryImpl;
 import com.example.MyShop.repository.CustomerRepository;
 import com.example.MyShop.repository.CustomerRepositoryImpl;
+import lombok.extern.slf4j.Slf4j;
 
 public class CustomerRequestImpl implements CustomerRequest{
 
@@ -13,19 +14,19 @@ public class CustomerRequestImpl implements CustomerRequest{
     AccountRepository accountRepository = new AccountRepositoryImpl();
 
     @Override
-    public int deposit(Long id,int money) {//입금
+    public void deposit(Long id,int money) {//입금
         Customer customer = customerrepository.selectCustomer(id);
         Account account = accountRepository.selectAccount(customer.getId());
         int balance = account.getBalance()+money;
-        return balance;
+        account.setBalance(balance);
     }
 
     @Override
-    public int withdraw(Long id,int money) {//출금
+    public void withdraw(Long id,int money) {//출금
         Customer customer = customerrepository.selectCustomer(id);
         Account account = accountRepository.selectAccount(customer.getId());
         int balance = account.getBalance()-money;
-        return balance;
+        account.setBalance(balance);
     }
 
 }
