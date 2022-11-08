@@ -10,5 +10,5 @@ public interface AccountRepository {
 
     Account deleteAccount(Long id);
 
-    Account updateAccount(Long id,Long customerId,String customerPassword,String address);
+    Account updateAccount(Account account);
 }

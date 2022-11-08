@@ -19,16 +19,14 @@ public class CustomerRepositoryImpl implements CustomerRepository{
     }
 
     @Override
-    public void deleteCustomer(Long id) {
+    public Customer deleteCustomer(Long id) {
         store.remove(id);
+        return store.get(id);
     }
 
     @Override
-    public Customer updateCustomer(Long id, String name, String rrNumber, String address, String password) {
-        store.get(id).setId(id);
-        store.get(id).setName(name);
-        store.get(id).setRrNumber(rrNumber);
-        store.get(id).setPassword(password);
-        return store.get(id);
+    public Customer updateCustomer(Customer customer) {
+        store.replace(customer.getId(), customer);
+        return store.get(customer.getId());
     }
 }

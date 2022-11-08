@@ -32,10 +32,8 @@ public class AccountRepositoryImpl implements AccountRepository{
     }
 
     @Override
-    public Account updateAccount(Long id, Long customerId, String customerPassword, String address) {
-        bank.get(id).setCustomerId(customerId);
-        bank.get(id).setCustomerPassword(customerPassword);
-        bank.get(id).setAddress(address);
-        return bank.get(id);
+    public Account updateAccount(Account account) {
+        bank.replace(account.getId(), account);
+        return bank.get(account.getId());
     }
 }
